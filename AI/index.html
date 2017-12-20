@@ -1,0 +1,399 @@
+<html>
+<head>
+ <title>Artificial intelligence (CK0031/CK0248)</title>
+ <link rel=StyleSheet href="style.css" type="text/css" media=screen>
+</head>
+    
+<body>
+ <a name="top"></a>
+ <h1>Artificial intelligence (CK0031/CK0248)</h1>
+        
+ The course overviews selected topics in artificial intelligence. The course deals with some of the central principles of AI, including search and problem-solving methods, reasoning and decision making under uncertainty:
+ <ol>
+  <li> <bold>Agents and environment</bold>: Rationality, Nature of the environment, Structure of the agents;
+  <li> <bold>Problem solving</bold>: Searching discrete environments and numerical optimisation;
+  <li> <bold>Probabilistic reasoning</bold>: Inference in probabilistic models.
+ </ol>
+ What the course does not deal with is Logic and Machine Learning. We offer more suitable courses to study those topics.
+ <br><br>
+ Stuff from the past: Previous versions of the course are available for <a href="https://users.ics.aalto.fi/fcorona/AI/2016_2">2016.2</a> (internal links may need adjustment.)
+ <br><br>
+ <iframe src="https://www.youtube.com/embed/JrN-Gmz3-jA" width="800" height="449" frameborder="5" allowfullscreen></iframe>
+ <br><br>
+ <bold>Instructor <font color=#333>&#9822;</font>:</bold> <a href="https://users.ics.aalto.fi/fcorona">Francesco Corona</a> (FC): francesco d&ouml;t corona &auml;t ufc d&ouml;t br
+ <br><br>
+ <bold> Physical location <font color=#333>&#9820;</font>:</bold> Monday, Wednesday and Friday 08:00-10:00. Bloco 915, Sala 1074.
+ <ul>
+  <li> There will no class on Mondays
+  <li> LEC I is available on Mondays for independent work
+ </ul>
+ <bold> Internet location <font color=#333>&#9814;</font>:</bold> Here! Or, <a href="https://si3.ufc.br/sigaa/public/home.jsf">here</a> (CK0031/CK0248) for mambojumbo related to administration.
+ <br><br>
+ <bold>Evaluation <font color=#333>&#9997;</font>:</bold> Approximately half a dozen theoretical and practical problem sets will be assigned as homework: Home assignments are for training but are not mandatory, they can be handed-in but they will not be evaluated. The actual evaluation will be based on three or four partial evaluations (APs) in class (weight 70%) and a final project (weight 30%). If needed a final evaluation (AF) will be arranged.
+ <br><br>
+ - AP1, <a href="2017_2/Tests/CK0031_CK0248_AP01_2017_2.pdf">first</a> (OCT 13) and <a href="2017_2/Tests/CK0031_CK0248_AP01_2017_2_segunda_chamada.pdf">second</a> (OCT 20) call: <a href="2017_2/Tests/CK0031_CK0248_AP01_2017_2.htm">Grades</a>
+ <br>
+ - AP2, <a href="2017_2/Tests/CK0031_CK0248_AP02_2017_2.pdf">first</a> (NOV 17) and <a href="2017_2/Tests/CK0031_CK0248_AP02_2017_segunda_chamada.pdf">second</a> (NOV 24) call: <a href="2017_2/Tests/CK0031_CK0248_AP02_2017_2.htm">Grades</a>
+ <br>
+  - AP3, <a href="2017_2/Tests/CK0031_CK0248_AP03_2017_2.pdf">optional</a> (Dec 15) : <a href="2017_2/Tests/CK0031_CK0248_AP03_2017_2.htm">Grades</a>
+ <br>
+ - HW1, part <a href="2017_2/Tests/CK0031-CK0248_HW01a_2017_2.pdf">one</a> and part <a href="2017_2/Tests/CK0031-CK0248_HW01b_2017_2.pdf">two</a>: <a href="2017_2/Tests/CK0031_CK0248_HW01_2017.2.htm">Grades</a>
+ <br><br>
+ - FINAL (with 2 APs or 3 APs): <a href="2017_2/Tests/CK0031_CK0248_FINAL_2017.2.htm">Grades</a>
+ <br><br>
+        
+ <hr id="dash">
+ Go to: &nbsp;
+ <a href="#Lectures">Lectures and schedule</a> |
+ <a href="#Assignments">Problem sets</a> |
+ <a href="#Material">Supplementary material</a> |
+ <a href="#Pops">As it pops out</a> |
+ <hr id="dash">
+        
+ <h2>News</h2>
+ 
+ <font color="red"> >>>>> AF ++ DEC 18 <<<<< </font> Only <a href="2017_2/Tests/CK0031_CK0248_FINAL_2017.2.htm">final grades</a> between 4 and 7 (Grades 5 and above do NOT need to take the AF)
+ <br><br>
+ 
+ <font color="orange"> >>>>> AP03 ++ DEC 15 <<<<< </font> Probabilistic reasoning (<a href="http://www0.cs.ucl.ac.uk/staff/d.barber/brml">BRML</a>, Chapters 1, 2 and 3 | Slides 03a, 03b and 03c)
+ <br><br>
+ 
+ <font color="orange"> >>>>> Final project  ++  By DEC 08, 2017 <<<<< </font> <a href="#Assignments"> READ ME! </a>
+ <ul>
+  <li> <a href="2017_2/Tests/CK0031-CK0248_HW01a_2017_2.pdf"> Part I</a>: Numerical optimisation (Slides 02c and 02d, Exercise 03)
+  <li> <a href="2017_2/Tests/CK0031-CK0248_HW01b_2017_2.pdf"> Part II</a>: Probabilistic reasoning (<a href="http://www0.cs.ucl.ac.uk/staff/d.barber/brml">BRML</a>, Chapters 1, 2 and 3 | Slides 03a, 03b and 03c)
+ </ul>
+     
+ <a href="https://users.ics.aalto.fi/fcorona/TCC/TCC_2017_short.pdf"><font color="orange"> >>>>> TCC Positions - 1 or 2 positions @DC/CC <<<<< </font></a>
+ <ul>
+  <li> Students of Computer Science, Computer Engineering, Statistics, Physics and Math are all invited to apply
+ </ul>
+ 
+ <a name="Lectures"></a>
+ <h2>Lectures and schedule</h2>
+ <ol start="0">
+     
+  <li><bold>About this course</bold>
+  <br><br>
+  <table id="bord" style="width: 100%;">
+     
+  <tr id="bord">
+   <td id="bord" style="width: 10%;">A
+   </td>
+   <td id="bord" style="width: 35%;"><bold>About this course</bold> (FC)
+   <ul>
+    <li><a href="2017_2/Lecture_notes/00_Artificial_intelligence.pdf">Slides</a> (AUG 30 and SEP 01 | <font color="red">Last update SEP 06</font>)
+   </ul>
+   </td>
+   <td id="bord" style="width: 55%;">
+   <ul>
+    <li> About the type of artificial intelligence that we shall study and the type that we shall not study in this course
+   </ul>
+   </td>
+   </tr>
+ 
+   </table>
+   <br>
+   
+   <li><bold>Agents and environment</bold>
+   <br><br>
+   <table id="bord" style="width: 100%;">
+   
+   <tr id="bord">
+   <td id="bord" style="width: 10%;">A
+   </td>
+   <td id="bord" style="width: 35%;"><bold>Agents and environments</bold> (FC)
+   <ul>
+    <li><a href="2017_2/Lecture_notes/01_Agents_and_environments.pdf">Slides</a>  (SEP 06 and <del>SEP 08</del> SEP 13 | <font color="red">Last update SEP 15</font>)
+    <li><a href="2017_2/Exercise_sheets/CK0031-CK0248_Exercise_01_2017_2.pdf">Exercises</a>
+   </ul>
+   </td>
+   <td id="bord" style="width: 55%;">
+   <ul>
+    <li> Structure of agents, nature of environments
+   </ul>
+   </td>
+   </tr>
+   
+   </table>
+   <br>
+   
+   <li> <bold>Problem solving</bold>
+   <br><br>
+   <ul>
+    <li> Solving by searching
+   </ul>
+   <br>
+   <table id="bord" style="width: 100%;">
+    
+   <tr id="bord">
+   <td id="bord" style="width: 10%;">A
+   </td>
+   <td id="bord" style="width: 35%;"><bold>Problems, solutions and problem-solving agents</bold> (FC)
+   </td>
+   <td id="bord" style="width: 55%;">
+   <ul>
+    <li> Problems, solutions and problem-solving agents
+    <li> Search algorithms
+   </ul>
+   </td>
+   </tr>
+ 
+   <tr id="bord">
+   <td id="bord" style="width: 10%;">B
+   </td>
+   <td id="bord" style="width: 35%;"><bold>Uninformed search strategies</bold> (FC)
+   </td>
+   <td id="bord" style="width: 55%;">
+   <ul>
+    <li> Breadth-first search, uniform-cost search
+    <li> Depth-first search, depth-limited search, iterative deepening depth-first search
+    <li> Bidirectional search
+   </ul>
+   </td>
+   </tr>
+ 
+   <tr id="bord">
+   <td id="bord" style="width: 10%;">C
+   </td>
+   <td id="bord" style="width: 35%;"><bold>Informed search strategies</bold> (FC)
+   </td>
+   <td id="bord" style="width: 55%;">
+   <ul>
+    <li> Greedy best-first search, $A^*$ search
+    <li> Memory-bounded heuristic search
+   </ul>
+   </td>
+   </tr>
+ 
+   <tr id="bord">
+   <td id="bord" style="width: 10%;">D
+   </td>
+   <td id="bord" style="width: 35%;"><bold>Heuristic functions</bold> (FC)
+   </td>
+   <td id="bord" style="width: 55%;">
+   <ul>
+    <li> Effect of heuristics, generating heuristics
+    <li> Learning heuristics from experience
+   </ul>
+   </td>
+   </tr>
+ 
+   </table>
+   <br>
+   
+   <ul>
+    <li><a href="2017_2/Lecture_notes/02a_Solution_search.pdf">Slides</a> (SEP 20, SEP 22, SEP 27 and SEP 29)
+    <li><a href="2017_2/Exercise_sheets/CK0031-CK0248_Exercise_02_2017_2.pdf">Exercises</a>
+   </ul>
+
+   <br><br>
+   
+   <ul>
+    <li> Local search
+   </ul>
+   <br>
+   <table id="bord" style="width: 100%;">
+
+   <tr id="bord">
+   <td id="bord" style="width: 10%;">A
+   </td>
+   <td id="bord" style="width: 35%;"><bold>Local search</bold> (FC)
+   <ul>
+    <li><a href="2017_2/Lecture_notes/02b_Local_search.pdf">Slides</a> (OCT 04 | <font color="red">Last update OCT 04</font>)
+   </ul>
+   </td>
+   <td id="bord" style="width: 55%;">
+   <ul>
+    <li> Hill-climbing, simulated annealing, local beam search, genetic algorithms
+   </ul>
+   </td>
+   </tr>
+   
+   </table>
+   <br>
+   
+   <ul>
+    <li> Numerical optimisation
+   </ul>
+   <br>
+   <table id="bord" style="width: 100%;">
+       
+   <tr id="bord">
+   <td id="bord" style="width: 10%;">A
+   </td>
+   <td id="bord" style="width: 35%;"><bold>Unconstrained optimisation</bold> (FC)
+   <ul>
+    <li><a href="2017_2/Lecture_notes/02c_Unconstrained_optimisation.pdf">Slides</a> (OCT 06, OCT 11, OCT 18 and OCT 20 | <font color="red">Last update OCT 22</font>)
+   </ul>
+   </td>
+   <td id="bord" style="width: 55%;">
+   <ul>
+    <li> Derivative-free methods (golden section and quadratic interpolation, Nelder and Mead)
+    <li> The Newton's method
+    <li> Line-search or descent methods (descent directions, strategies for choosing the step-length, the descent method with Newton's directions, descent methods with quasi-Newton's directions, gradient and conjugate-gradient descent methods)
+    <li> Trust-region methods
+    <li> The non-linear least-squares method (the Gauss-Newton method, the Levenberg-Marquardt method)
+   </ul>
+   </td>
+   </tr>
+   
+   <tr id="bord">
+   <td id="bord" style="width: 10%;">B
+   </td>
+   <td id="bord" style="width: 35%;"><bold>Constrained optimisation</bold> (FC)
+   <ul>
+    <li><a href="2017_2/Lecture_notes/02d_Constrained_optimisation.pdf">Slides</a> (OCT 25 and OCT 7)
+   </ul>
+   </td>
+   <td id="bord" style="width: 55%;">
+   <ul>
+    <li> The penalty function method
+    <li> The augmented Lagrangian method
+   </ul>
+   </td>
+   </tr>
+   
+   </table>
+   <br>
+   <ul>
+    <li><a href="2017_2/Exercise_sheets/CK0031-CK0248_Exercise_03_2017_2.pdf">Exercises</a> (<font color="red">Last update NOV 16</font>, fixed typing errors in A.2 and footnote)
+   </ul>
+   
+   <br><br>
+                
+ <li> <bold>Probabilistic reasoning</bold>
+ <br><br>
+ <ul>
+  <li> Elements of probabilistic modelling
+ </ul>
+ <br>
+ <table id="bord" style="width: 100%;">
+ <tr id="bord">
+ <td id="bord" style="width: 10%;">A
+ </td>
+ <td id="bord" style="width: 35%;"><bold>Probabilistic reasoning</bold> (FC)
+ <ul>
+  <li><a href="2017_2/Lecture_notes/03a_Probabilistic_reasoning.pdf">Slides</a> (NOV 03, <strike>NOV 08 and NOV 10</strike> (cancelled, Encontros Universit&aacuterios) and NOV 22 | <font color="red">Last update NOV 22</font)
+ </ul>
+ </td>
+ <td id="bord" style="width: 55%;">
+ <ul>
+  <li> Probability refresher (Definitions, rules, tables, conditional probability)
+  <li> Probabilistic reasoning
+  <li> Prior, likelihood and posterior
+ </ul>
+ </td>
+ </tr>
+                                    
+ <tr id="bord">
+ <td id="bord" style="width: 10%;">B</td>
+ <td id="bord" style="width: 35%;"><bold>Graph concepts</bold> (FC)
+ <ul>
+  <li><a href="2017_2/Lecture_notes/03b_Graph_concepts.pdf">Slides</a> (NOV 22 and NOV 29)
+ </ul>
+ </td>
+ <td id="bord" style="width: 55%;">
+ <ul>
+  <li> Definitions
+  <li> Numerical encoding (edge lists, adjacency matrices, clique matrices)
+ </ul>
+ </td>
+ </tr>
+                                    
+ <tr id="bord">
+ <td id="bord" style="width: 10%;">C
+ </td>
+ <td id="bord" style="width: 35%;"><bold>Belief networks</bold> (FC)
+ <ul>
+  <li><a href="2017_2/Lecture_notes/03c_Belief_networks.pdf">Slides</a> (DEC 06)
+ </ul>
+ </td>
+ <td id="bord" style="width: 55%;">
+  <ul>
+   <li> Structure (independencies and specifications)
+   <li> Uncertain and unreliable evidence
+   <li> Belief networks (conditional independence, collisions, path manipulations for independence, d-separation, graphical and distributional in/dependence, Markov equivalence, expressibility of belief networks)
+   <li> Causality (Simpson's paradox, do-calculus, influence diagrams)
+  </ul>
+ </td>
+ </tr>
+ </table>
+ 
+ <br>
+ <ul>
+  <li> Inference in probabilistic models
+ </ul>
+ <br>
+ <table id="bord" style="width: 100%;">
+ <tr id="bord">
+  <td id="bord" style="width: 10%;">A
+  </td>
+  <td id="bord" style="width: 35%;"><bold>Inference in trees</bold> (FC)
+  <ul>
+   <li><a href="http://www.beachpark.com.br">Slides</a>
+  </ul>
+  </td>
+  <td id="bord" style="width: 55%;">
+  <ul>
+   <li> Marginal inference (Variable elimination in a Markov chain and message passing, the sum-product algorithm of factor graphs, dealing with evidence, computing the marginal likelihood, loops)
+   <li> Forms of inference (max-product, finding the $N$ most probable states, the most probable path and the shortes path, mixed inference)
+  </ul>
+ </td>
+ </tr>
+ </table>
+ </ul>
+ </ol>
+ [<a href="#top">Top</a>]
+ <hr id="dash">
+        
+ <a name="Assignments"></a>
+ <h2>Problem sets</h2>
+ As we use problem set questions covered by books, papers and webpages, we expect you not to copy, refer to, or look at the solutions in preparing your answers. We expect you to want to learn and not google for answers: If you do happen to use other material, it must be acknowledged clearly with a citation on the submitted solution.<br><br> <font color=#333>&#9775;</font> The purpose of problem sets is to help you think about the material, not just give us the right answers.<br><br>
+ 
+ Homeworks must be done individually: Each of you must hand in his/her own answers. In addition, each of you must write his/her own code when requested. It is acceptable, however, for you to collaborate in figuring out answers. We are assuming that you take the responsibility to make sure you personally understand the solution to any work arising from collaboration (though, <font color="red">you must indicate on each homework with whom you collaborated</font>).
+ <br><br>
+ <font color=#333>&#9883;</font> To typeset assignments, students are encouraged to use this <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a> template: <a href="2017_2/Additional_stuff/CK0031-CK0248_Exercise_template_2017_2.tex">Source</a> (<a href="2017_2/Additional_stuff/CK0031-CK0248_Exercise_template_2017_2.pdf">PDF</a>).
+ <br><br>
+ <font color=#333>&#9888;</font> Final projects/assignments must be returned via SIGAA (you'll get notified of the opening of a new task).
+ <br>
+ <font color="red">Delays will be penalised (<24h, -20% of the grade; <48h, -40% of grade; ...).</font><br><br>
+     
+ <br><br>
+ 
+ [<a href="#top">Top</a>]
+ <hr id="dash">
+        
+ <a name="Material"></a>
+ <h2>Material</h2>
+ Course slides will suffice. Slides are mostly based on the three following textbooks:
+ <ul>
+  <li> <bold>Bayesian reasoning and machine learning</bold> (<a href="http://www0.cs.ucl.ac.uk/staff/d.barber/brml">Book website</a>), by David Barber
+  <li> <bold>Numerical optimization</bold>, by Jorge Nocedal and S. Wright
+  <li> <bold>Artificial intelligence: A modern approach</bold> (<a href="http://aima.cs.berkeley.edu">Book website</a>), by Stuart Russell and Peter Norvig (tem tradu&ccedil;&atilde;o tamb&eacute;m)
+ </ul>
+ The material can be complemented using material from the following textbooks (list not exhaustive):
+ <ol>
+  <li> <bold>Probabilistic graphical models: principles and techniques</bold>, by Daphne Koller and Nir Friedman
+  <li> <bold>Probabilistic reasoning in intelligent networks: Networks of plausible inference</bold>, by Judea Pearl
+  <li> <bold>Practical methods of optimization</bold>, by R. Fletcher
+  <li> <bold>Heuristic Search: Theory and Applications</bold>, by Stefan Edelkamp and Stefan Schr&ouml;dl
+ </ol>
+ <font color=#333>&#9760;</font> Copies of these books are floating around.<br><br>
+ <font color="red"> >>>>>> Course material is prone to a typo or two - Please inbox  FC to report <<<<<< </font>
+        
+ <a href="#top">Top</a>
+ <hr id="dash">
+        
+ <a name="Pops"></a>
+ <h2>Read me or watch me</h2>
+ <ul>
+  <li> <a href="http://imgur.com/r/shittyrobots">Shitty robots</a>
+  <li> <a href="http://bit.ly/2iZWlSg">Slaughterbots</a>
+ </ul>
+        
+ <a href="#top">Top</a>
+ <hr id="dash">
+
+</body>
+</html>

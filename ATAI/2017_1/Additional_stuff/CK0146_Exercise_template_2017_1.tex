@@ -1,0 +1,68 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{color}
+
+\newenvironment{EX}[2][Exercise]{\begin{trivlist}
+\item[{\color{red} \hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}}]}{\end{trivlist}}
+
+\newenvironment{SL}[1][Solution]{\begin{trivlist}
+\item[{\color{blue} \hskip \labelsep {\bfseries #1:}}]}{\end{trivlist}}
+
+
+\begin{document}
+
+% --------------------------------------------------------------
+% Start here
+% --------------------------------------------------------------
+
+\noindent Matr\'icula (First-name Last-name) \hfill {\Large \bfseries CK0146: Homework A} \\
+
+\begin{EX}{A.1}
+Consider the sum-of-squares error function
+\begin{equation}
+E(\mathbf{w}) = \cfrac{1}{2}\sum_{n=1}^{N}{\Big(y(x_n,\mathbf{w}) - t_n\Big)^2}, \label{eq: eq_a}
+\end{equation}
+in which the function $y(x,\mathbf{w})$ is given by the polynomial
+\begin{equation}
+y(x,\mathbf{w}) = w_0 + w_1x + w_2x^2 + \cdots + w_Mx^M = \sum_{j=0}^{M}{w_jx^j}. \label{eq: eq_b}
+\end{equation}
+Show that the coefficients $\mathbf{w} = \{w_i\}$ that minimise this error function are given by the solution of the following set of linear equations
+\begin{equation}
+\sum_{j=0}^{M}{A_{ij}w_j} = T_i, \label{eq: eq_c}
+\end{equation}  
+where 
+\begin{subequations}
+\begin{equation}
+A_{ij} = \sum_{n=1}^{N}{(x_n)^{j+1}}; \label{eq: eq_ca}
+\end{equation}
+\begin{equation}
+T_i = \sum_{n=1}^{N}{(x_n)^it_n}. \label{eq: eq_cb}
+\end{equation}
+\end{subequations}
+Suffix $i$ or $j$ denotes the index of a component, whereas $(x)^i$ denotes $x$ raised to the power of $i$.
+\end{EX}
+
+\begin{SL}\
+Substituting Equation \ref{eq: eq_b} into Equation \ref{eq: eq_a} and then differentiating w.r.t. $w_j$, we obtain $$\sum_{n=1}^{N}{\Big(\sum_{j=0}^{M}{w_jx_n^j - tn}\Big)x_n^i} = 0.$$ Rearranging terms gives the required result.
+\end{SL}
+
+% --------------------------------------------------------------
+% Next exercise
+% --------------------------------------------------------------
+
+\begin{EX}{A.2}
+$\cdots$
+\end{EX}
+
+\begin{SL}\
+$\cdots$
+\end{SL}
+
+% --------------------------------------------------------------
+% Stop here
+% --------------------------------------------------------------
+
+\end{document}

@@ -1,0 +1,79 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{color}
+
+\newenvironment{EX}[2][Exercise]{\begin{trivlist}
+\item[{\color{red} \hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}}]}{\end{trivlist}}
+
+\newenvironment{SL}[1][Solution]{\begin{trivlist}
+\item[{\color{blue} \hskip \labelsep {\bfseries #1:}}]}{\end{trivlist}}
+
+
+\begin{document}
+
+% --------------------------------------------------------------
+% Start here
+% --------------------------------------------------------------
+
+\noindent Matr\'icula (First-name Last-name) \hfill {\Large \bfseries CK0031: Homework A} \\
+
+\begin{EX}{A.1}
+ Define in your own words:
+ \begin{itemize}
+  \item[a)] intelligence;
+  \item[b)] artificial intelligence;
+  \item[c)] $\cdots$
+ \end{itemize}
+\end{EX}
+
+\begin{SL}\
+ \begin{itemize}
+  \item[a)] Dictionary definitions of \textbf{intelligence} talk about `\textit{the capacity to acquire and apply knowledge}' or `\textit{the faculty of thought and reason}' or `\textit{the ability to comprehend and profit from experience.}' These are all reasonable answers, but if we want something quantifiable we would use something like `\textit{the ability to apply knowledge in order to perform better in an environment.}' 
+  \item[b)] We define \textbf{artificial intelligence} as the study and construction of agent programs that perform well in a given environment, for a given agent architecture.
+  \item[c)] $\cdots$
+ \end{itemize}
+\end{SL}
+
+% --------------------------------------------------------------
+% Next exercise
+% --------------------------------------------------------------
+
+\begin{EX}{A.2}
+Explain why problem formulation must follow goal formulation
+\end{EX}
+
+\begin{SL}\
+In goal formulation, we decide which aspects of the world we are interested in, and which can be ignored or abstracted away. Then in problem formulation we decide how to manipulate the important aspects (and ignore the others). If we did problem formulation first we would not know what to include and what to leave out. That said, it can happen that there is a cycle of iterations between goal formulation, problem formulation, and problem solving until one arrives at a sufficiently useful and efficient solution.
+\end{SL}
+
+% --------------------------------------------------------------
+% Next exercise
+% --------------------------------------------------------------
+
+\begin{EX}{A.3}
+Prove the two following equalities
+\begin{subequations}
+\begin{equation}
+ p(x,y|z) = p(x|z)p(y|x,z); \label{eq: eq_a}
+\end{equation}
+\begin{equation}
+p(x|y,z) = \cfrac{p(y|x,z)p(x|z)}{p(y|z)}. \label{eq: eq_b}
+\end{equation}
+\end{subequations}
+\end{EX}
+
+\begin{SL}\
+
+For Equation \ref{eq: eq_a}, we have $$p(x,y|z) = \cfrac{p(x,y,z)}{p(z)} = \cfrac{p(y|x,z)p(x,z)}{p(z)} = p(y|x,z)p(x|z).$$
+
+For Equation \ref{eq: eq_b}, we have $$p(x|y,z) = \cfrac{p(x,y,z)}{p(y,z)} = \cfrac{p(y|x,z)p(x,z)}{p(y,z)} = \cfrac{p(y|x,z)p(x|z)}{p(y|z)}.$$
+\end{SL}
+
+% --------------------------------------------------------------
+% Stop here
+% --------------------------------------------------------------
+
+\end{document}

@@ -1,0 +1,95 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+
+\usepackage{listings}
+\usepackage[dvipsnames]{xcolor}
+
+\newenvironment{EX}[2][Exercise]{\begin{trivlist}
+\item[{\color{red} \hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}}]}{\end{trivlist}}
+
+\newenvironment{SL}[1][Solution]{\begin{trivlist}
+\item[{\color{blue} \hskip \labelsep {\bfseries #1:}}]}{\end{trivlist}}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{Gray!25!white},
+    commentstyle=\color{PineGreen},
+    keywordstyle=\color{Red},
+    basicstyle=\footnotesize\ttfamily,
+    breakatwhitespace=false,
+    showstringspaces=false,
+    showspaces=false,
+    showtabs=false,
+    breaklines=true,
+    keepspaces=true,
+    captionpos=b,
+    numbers=left,
+    numbersep=5pt,
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+\begin{document}
+
+% --------------------------------------------------------------
+% Start here
+% --------------------------------------------------------------
+
+\noindent Matr\'icula (First-name Last-name) \hfill {\Large \bfseries CK0255: Homework A} \\
+
+\begin{EX}{A.1}\
+You are given a random sample $X_1,X_2,\dots,X_n$ from a population with PDF $f(x|\theta)$. Show that the maximising the likelihood function $\mathcal{L}(\theta|\mathbf{x})$, as a function of $\theta$ is equivalent to maximising $\log{[\mathcal{L}(\theta|\mathbf{x})]}$.
+\end{EX}
+
+\begin{SL}\
+The $\log$ function is a strictly monotone increasing function. Therefore, $\mathcal{L}(\theta|\mathbf{x}) > \mathcal{L}(\theta'|\mathbf{x})$ if and only if $\log{[\mathcal{L}(\theta|\mathbf{x})]} > \log{[\mathcal{L}(\theta'|\mathbf{x})]}$.
+\vskip0.250cm
+\noindent
+So, the value $\hat{\theta}$ that maximises $\log{[(\theta|\mathbf{x})]}$ is the same as the value that maximises $\mathcal{L}(\theta|\mathbf{x})$.
+\end{SL}
+
+% --------------------------------------------------------------
+% Next exercise
+% --------------------------------------------------------------
+
+\begin{EX}{A.2}
+Write code to generate $1000$ variables from the following distributions
+\begin{enumerate}
+\item $Y \sim \text{Binomial}(8,{2}/{3})$;
+\item $Y \sim \text{Hyper-geometric}(\text{N}=10,\text{M}=8,\text{K}=4)$;\end{enumerate}
+Compare the mean and the variance  with the theoretical values.
+\end{EX}
+
+\begin{SL}\
+The $\texttt{R}$ code and corresponding output is the following
+\begin{enumerate}
+\item $\leadsto$
+\begin{lstlisting}[language=S]
+obs <- rbinom(1000,8,2/3) 
+meanobs <- mean(obs) 
+variance <- var(obs)
+\end{lstlisting}
+
+\begin{lstlisting}[]Output: > meanobs   [1] 5.231
+ > variance   [1] 1.707346
+\end{lstlisting}
+\item $\leadsto$
+\begin{lstlisting}[language=S]
+obs<- rhyper(1000,8,2,4) 
+meanobs <- mean(obs) 
+variance <- var(obs)
+\end{lstlisting}
+
+\begin{lstlisting}[language=S]Output: > meanobs   [1] 3.169
+ > variance   [1] 0.4488879
+\end{lstlisting}
+\end{enumerate}
+\end{SL}
+
+% --------------------------------------------------------------
+% Stop here
+% --------------------------------------------------------------
+
+\end{document}

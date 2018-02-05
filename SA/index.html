@@ -11,12 +11,13 @@
  The 2018.1 version of CK0191 momentarily takes over the usual content of the course. In 2018.1, we overview some basic facts in the theory of Markovian deterministic and random functions.
 
  <ol>
-  <li> <bold>Quick refresher</bold>: Probability and random variable theory; Dynamical systems analysis
-  <li> <bold></bold>: State-space representation: Analysis, state transition matrix, Lagrange formula, similarity transformations, diagonalization, Jordan's form, state transition matrix and modes
-  <li> <bold>Markov processes</bold>: General features, characterising functions, time-evolution equations, homogeneity, simulation;
-  <li> <bold>Continuous Markov processes</bold>: Propagator, time-evolution equations, the Langevin equation, stable processes, first exit-time theory, simulation;
+  <li> <bold>Quick refreshers</bold>: Probability and random variable theory, Dynamical systems analysis;
+  <li> <bold>Deterministic Markov processes</bold>: State-space analysis, Lagrange formula, similarity transformations, Jordan's form
+  <li> <bold>Stochastic Markov processes</bold>: General features, characterising functions, time-evolution equations;
+  <li> <bold>Discrete Markov processes</bold>: Classification of states, irreducibility, important matrixes and distributions;
+  <li> <bold>Continuous Markov processes</bold>: Propagator, time-evolution equations, the Langevin equation, first exit-time theory;
  </ol>
-If time allows, selected topics related to jump Markov processes will be discussed, too [Propagator, time-evolution equations, [continuous states: next-jump density, self-diffusion and brownian motion, simulation], [Discrete states: completely and temporally hmogeneous processes]].
+If time allows, selected topics related to jump Markov processes will be mentioned [Propagator, time-evolution equations, [continuous states: next-jump density, self-diffusion and brownian motion, simulation], [Discrete states: completely and temporally hmogeneous processes]].
  <br>
 
  <iframe src="https://www.youtube.com/embed/3Z_h7wkYJgc" width="800" height="449" frameborder="5"></iframe>
@@ -66,17 +67,22 @@ If time allows, selected topics related to jump Markov processes will be discuss
    <a href="http://site.ipark.tur.br">Slides</a>
  <br><br>
 
- <li> <bold>Probability and random variable theory</bold><br><br>
+ <li> <bold>Refresher</bold><br><br>
  <table id="bord" style="width: 100%;">
   <tr id="bord">
   <td id="bord" style="width: 10%;">A</td>
-  <td id="bord" style="width: 35%;"><bold>Refresher</bold> (FC)</td>
+  <td id="bord" style="width: 35%;"><bold>Dynamical systems</bold> (FC)</td>
  <td id="bord" style="width: 55%;">
   <ul>
-   <li> Laws of probability
-   <li> Random variables
-   <li> Useful theorems
-   <li> Random numbers
+   <li> Input-output and state-space representations, characteristics
+  </ul>
+ </td>
+  <tr id="bord">
+  <td id="bord" style="width: 10%;">B</td>
+  <td id="bord" style="width: 35%;"><bold>Probability theory</bold> (FC)</td>
+ <td id="bord" style="width: 55%;">
+  <ul>
+   <li> Laws of probability, random variables, useful theorems, random numbers
   </ul>
  </td>
  </tr>
@@ -87,36 +93,68 @@ If time allows, selected topics related to jump Markov processes will be discuss
    <a href="http://site.ipark.tur.br">Exercises</a>
  <br><br>
 
- <li> <bold>Markov processes</bold><br><br>
+ <li> <bold>Deterministic Markov processes</bold><br><br>
  <table id="bord" style="width: 100%;">
   <tr id="bord">
-  <td id="bord" style="width: 10%;">B</td>
-  <td id="bord" style="width: 35%;"><bold>General features</bold> (FC)</td>
+  <td id="bord" style="width: 10%;">A</td>
+  <td id="bord" style="width: 35%;"><bold>State-space representation</bold> (FC)</td>
  <td id="bord" style="width: 55%;">
   <ul>
-   <li> State density function
-   <li> Chapman-Kolmogorov equation
-   <li> Functions of state
+   <li> Analysis and state transition matrix
+   <li> Sylvester expansion
+  </ul>
+ </td>
+  <tr id="bord">
+  <td id="bord" style="width: 10%;">B</td>
+  <td id="bord" style="width: 35%;"><bold>Time evolution</bold> (FC)</td>
+ <td id="bord" style="width: 55%;">
+  <ul>
+   <li> Lagrange formula, free and forced evolution
+   <li> Similarity transformations and diagonalisation
+   <li> Jordan's form, generalised eigenvectors
+   <li> Generalised modal matrix and state transition matrix
+   <li> State transition matrix and modes
+  </ul>
+ </td>
+ </tr>
+ </table>
+ <br>
+   <a href="http://site.ipark.tur.br">Slides</a>
+ <br>
+   <a href="http://site.ipark.tur.br">Exercises</a>
+ <br><br>
+
+ <li> <bold>Stochastic Markov processes</bold><br><br>
+ <table id="bord" style="width: 100%;">
+  <tr id="bord">
+  <td id="bord" style="width: 10%;">A</td>
+  <td id="bord" style="width: 35%;"><bold>Markov chains</bold> (FC)</td>
+ <td id="bord" style="width: 55%;">
+  <ul>
+   <li> Definitions, dependence and embeddeability
+   <li> Chapman-Kolmogorov equations
+   <li> Classification of states
+   <li> Irreducibility
+   <li> Potential, fundamental and recheability matrices
+   <li> Probability distributions
+   <li> Reversibility
+  </ul>
+ </td>
+  <tr id="bord">
+  <td id="bord" style="width: 10%;">B</td>
+  <td id="bord" style="width: 35%;"><bold>General processes</bold> (FC)</td>
+ <td id="bord" style="width: 55%;">
+  <ul>
+   <li> State density function and Chapman-Kolmogorov equation
    <li> Propagators
    <li> Kramers-Moyal equations
    <li> Time-integral
    <li> Time-evolution equations
-   <li> Homogeneity
   </ul>
  </td>
- </tr>
- </table>
- <br>
-   <a href="http://site.ipark.tur.br">Slides</a>
- <br>
-   <a href="http://site.ipark.tur.br">Exercises</a>
- <br><br>
-
- <li> <bold>Continuous Markov processes</bold><br><br>
- <table id="bord" style="width: 100%;">
   <tr id="bord">
-  <td id="bord" style="width: 10%;">C</td>
-  <td id="bord" style="width: 35%;"><bold>Definitions, evolution, simulation</bold> (FC)</td>
+  <td id="bord" style="width: 10%;">A</td>
+  <td id="bord" style="width: 35%;"><bold>Continuous Markov processes</bold> (FC)</td>
  <td id="bord" style="width: 55%;">
   <ul>
    <li> Propagator and time-evolution equations
@@ -135,11 +173,11 @@ If time allows, selected topics related to jump Markov processes will be discuss
    <a href="http://site.ipark.tur.br">Exercises</a>
  <br><br>
 
- <li> <bold>Jump Markov processes, continuous states</bold><br><br>
+ <li> <bold>Jump Markov processes</bold><br><br>
  <table id="bord" style="width: 100%;">
   <tr id="bord">
-  <td id="bord" style="width: 10%;">D</td>
-  <td id="bord" style="width: 35%;"><bold>Definitions, evolution, simulation</bold> (FC)</td>
+  <td id="bord" style="width: 10%;">A</td>
+  <td id="bord" style="width: 35%;"><bold>Continuous states</bold> (FC)</td>
  <td id="bord" style="width: 55%;">
   <ul>
    <li> Propagator and time-evolution equations
@@ -149,19 +187,9 @@ If time allows, selected topics related to jump Markov processes will be discuss
    <li> Simulation
   </ul>
  </td>
- </tr>
- </table>
- <br>
-   <a href="http://site.ipark.tur.br">Slides</a>
- <br>
-   <a href="http://site.ipark.tur.br">Exercises</a>
- <br><br>
-
- <li> <bold>Jump Markov processes, discrete states</bold><br><br>
- <table id="bord" style="width: 100%;">
   <tr id="bord">
-  <td id="bord" style="width: 10%;">E</td>
-  <td id="bord" style="width: 35%;"><bold>Definitions, evolution, simulation</bold> (FC)</td>
+  <td id="bord" style="width: 10%;">B</td>
+  <td id="bord" style="width: 35%;"><bold>Discrete states</bold> (FC)</td>
  <td id="bord" style="width: 55%;">
   <ul>
    <li> Propagator, time-evolution equations, master equations

@@ -1,0 +1,106 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+
+\usepackage{listings}
+\usepackage[dvipsnames]{xcolor}
+
+\newenvironment{EX}[2][Exercise]{\begin{trivlist}
+\item[{\color{red} \hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}}]}{\end{trivlist}}
+
+\newenvironment{SL}[1][Solution]{\begin{trivlist}
+\item[{\color{blue} \hskip \labelsep {\bfseries #1:}}]}{\end{trivlist}}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{Gray!25!white},
+    commentstyle=\color{PineGreen},
+    keywordstyle=\color{Red},
+    basicstyle=\footnotesize\ttfamily,
+    breakatwhitespace=false,
+    showstringspaces=false,
+    showspaces=false,
+    showtabs=false,
+    breaklines=true,
+    keepspaces=true,
+    captionpos=b,
+    numbers=left,
+    numbersep=5pt,
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+\begin{document}
+
+% --------------------------------------------------------------
+% Start here
+% --------------------------------------------------------------
+
+\noindent Matr\'icula (First-name Last-name) \hfill {\Large \bfseries CK0191: Homework A} \\
+
+\begin{EX}{A.1}
+For a given function $f(x)$, the integral $\int_{a}^{b}{f(x)\text{d}x}$ computed using the formula
+\begin{equation}
+\int_{a}^{b}{f(x)\text{d}x} \approx h \Big[ \cfrac{1}{2}f(x_0) + \sum_{i=1}^{n-1}{f(x_i) + \cfrac{1}{2}f(x_n)} \Big], 
+\end{equation}
+is approximated by $n$ trapezoids of equal width $h$. 
+\vskip0.250cm
+\noindent Write a Python function that takes any $f$, $a$ and $b$, and $n$ as inputs and returns the approximation. 
+\end{EX}
+
+\begin{SL}\
+We write a Python function \texttt{trapz.py} with variables corresponding to the notation
+\begin{lstlisting}[language=Python]
+def trapz(f, a, b, n):
+    h = float(b-a)/n
+    result = 0.5*f(a) + 0.5*f(b)  # 1st and 3rd term between brackets 
+    for i in range(1, n):
+        result += f(a + i*h)      # Loop through index i (2nd term)
+    result *= h                   # Final multiplication
+    return result
+\end{lstlisting}
+The function can be tested as follows
+\begin{lstlisting}[language=Python]
+>>> from trapz import trapz
+>>> from math import exp
+>>> v = lambda t: 3*(t**2)*exp(t**3)
+>>> n = 4
+>>> num_int = trapz(v, 0, 1, n)
+>>> num_int
+    1.9227167504675762
+\end{lstlisting}
+\end{SL}
+
+% --------------------------------------------------------------
+% Next exercise
+% --------------------------------------------------------------
+
+\begin{EX}{A.2} \
+Consider a system with SS representation given by a linear and stationary model
+$$
+\begin{cases}
+\dot{x}(t) & = Ax(t) + Bu(t) \\
+y(t)       & = Cx(t)
+\end{cases}.
+$$
+Let $A=\begin{bmatrix} 0 & 1 \\ -4 & -4 \end{bmatrix}$, $B=\begin{bmatrix}-1 \\ 2\end{bmatrix}$ and $C=\begin{bmatrix}1 & 1 \end{bmatrix}$.
+\vskip0.250cm
+\noindent Determine the Sylvester expansion of the state transition matrix $e^{At}$, show the modes of the system.
+\end{EX}
+
+\begin{SL} \
+$$
+e^{At} = 
+\begin{bmatrix}
+   e^{-2t} + 2te^{-2t} & te^{-2t} \\
+-4te^{-2t}             & e^{-2t}-2te^{-2t} 
+\end{bmatrix}.
+$$
+\end{SL}
+
+% --------------------------------------------------------------
+% Stop here
+% --------------------------------------------------------------
+
+\end{document}

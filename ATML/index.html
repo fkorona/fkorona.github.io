@@ -1,436 +1,230 @@
 <html>
 <head>
-    <title>Advanced topics in machine learning (CK0255) / Probability and random variables (TIP8412)</title>
+    <title>Advanced topics in machine learning (CK0255) / Linear systems (TIP7244)</title>
     <link rel=StyleSheet href="style.css" type="text/css" media=screen>
 </head>
 
 <body>
  <a name="top"></a>
+  <h1>Advanced topics in machine learning (CK0255)<br>Linear systems (TIP7244)</h1>
+  We overview some basic facts in the study of deterministic and random Markovian functions.
 
- <h1>Advanced topics in machine learning (CK0255) <br> Probability and random variables (TIP8421)</h1>
- The course overviews basic facts of probability and distribution theory, the mechanisms of basic inference, large-sample theory on convergence in probability and convergence in distribution, the central limit theorem, and complete inference based on maximum likelihood theory.
+  <ol>
+   <li> <bold>Refreshers</bold>: Probability and random variable theory, vector calculus, signals and systems;
+   <li> <bold>Deterministic Markov processes</bold>: State-space analysis, Lagrange formula, similarity transformations;
+   <li> <bold>Stochastic Markov processes</bold>: General features, characterising functions, time-evolution equations;
+   <li> <bold>Discrete Markov processes</bold>: Classification of states, irreducibility, important matrixes and distributions.
+  </ol>
 
- <ol>
-  <li> <bold>Introductory refresher</bold>: Probability theory and distribution theory;
-      <li> <bold>Multivariate distributions</bold>: Distributions, expectations, transformations, correlation and dependence;
-  <li> <bold>Common distributions</bold>: The binomial distribution and friends, the Poisson distribution, the gamma distribution and friends, the normal distribution, $t$ and $F$ distributions, mixtures;
-  <li> <bold>Elementary inference</bold>: Sampling and statistics, confidence intervals, hypothesis testing;
-  <li> <bold>Consistency and limiting distributions</bold>: Generalities about convergence in probability and distribution, the central limit theorem;
-  <li> <bold>Maximum likelihood methods</bold>: Estimation and testing, Rao-Cram&#233;r lower bound, tests, expectation-maximization.
- </ol>
+  <iframe src="https://www.youtube.com/embed/O3pyCGnZzYA" width="800" height="449" frameborder="5" allow="encrypted-media"></iframe>
 
- If time allows, selected topics related to sufficiency, completeness, uniqueness and independence will be discussed, too.
+  <br><br>
 
- <br><br>
+  <bold>Instructor <font color=#333>&#9822;</font>:</bold> <a href="https://fkorona.github.io">Francesco Corona</a> (FC), francesco d&ouml;t corona &auml;t ufc d&ouml;t br<br><br>
+  <bold>Physical location <font color=#333>&#9820;</font>:</bold> Fridays, 14:00-18:00, Bloco TBA, Sala TBA.<br>
+  <bold>Internet location <font color=#333>&#9814;</font>:</bold> Here! Or, <a href="https://si3.ufc.br/sigaa/public/home.jsf">here</a> (CK0255/TIP7244) for mambojumbo related to administration.
+  <br><br>
 
- <iframe src="https://www.youtube.com/embed/etviGf1uWlg" width="800" height="449" frameborder="5"></iframe>
+  <bold>Evaluation <font color=#333>&#9997;</font>:</bold> Approximately half a dozen theoretical and practical problem sets will be assigned as homework: Home assignments are for training but are not mandatory, they can be handed-in but they will not be evaluated. The actual evaluation will be based on three partial evaluations (APs) in class (weight 70%) and a final project (weight 30%). If needed a final evaluation (AF) will be arranged.
+  <br><br>
 
- <br><br>
+  <hr id="dash">
+   Go to: &nbsp;
+   <a href="#Lectures">Lectures and schedule</a> |
+   <a href="#Assignments">Problem sets</a> |
+   <a href="#Material">Supplementary material</a> |
+   <a href="#Pops">As it pops out</a> |
+  <hr id="dash">
 
- <bold>Instructor <font color=#333>&#9822;</font>:</bold> <a href="https://fkorona.github.io">Francesco Corona</a> (FC), francesco d&ouml;t corona &auml;t ufc d&ouml;t br<br><br>
- <bold>Physical location <font color=#333>&#9820;</font>:</bold> Wednesdays and Fridays 14:00-16:00, Bloco 951, Sala 10.<br>
- <bold>Internet location <font color=#333>&#9814;</font>:</bold> Here! Or, <a href="https://si3.ufc.br/sigaa/public/home.jsf">here</a> (CK0255/TIP8421) for mambojumbo related to administration.
+  <h2>News</h2>
+  <font color="orange">>>>>>> No news, good news! <<<<<<</font>
 
- <br><br>
+  <a name="Lectures"></a>
+  <h2>Lectures and schedule</h2>
 
- <bold>Evaluation <font color=#333>&#9997;</font>:</bold> Approximately half a dozen theoretical and practical problem sets will be assigned as homework: Home assignments are for training but are not mandatory, they can be handed-in but they will not be evaluated. The actual evaluation will be based on three or four partial evaluations (APs) in class (weight 70%) and a final project (weight 30%). If needed a final evaluation (AF) will be arranged.
+  <ol start="0">
 
- <br><br>
-
- <bold>Grading <font color=#333>&#10003;</font>:</bold><br>
-  - AP01 (SEP 29/OCT 06): <a href="2017_2/Tests/CK0255_TIP8421_AP01.pdf">Exam sheet (SEP 29)</a>/<a href="2017_2/Tests/CK0255_TIP8421_AP01_2nd.pdf">Exam sheet (OCT 06)</a> and <a href="2017_2/Tests/CK0255_TIP8421_AP01.htm">grades</a> (updated, OCT 11)<br>
-  - AP02 (NOV 24): <a href="2017_2/Tests/CK0255_TIP8421_AP02.pdf">Exam sheet</a> and <a href="2017_2/Tests/CK0255_TIP8421_AP02.htm">grades</a>
-
- <br><br>
-
- <hr id="dash">
-  Go to: &nbsp;
-  <a href="#Lectures">Lectures and schedule</a> |
-  <a href="#Assignments">Problem sets</a> |
-  <a href="#Material">Supplementary material</a> |
-  <a href="#Pops">As it pops out</a> |
- <hr id="dash">
-
- <h2>News</h2>
-
- <font color="red"> >>>>> Final project  ++  By DEC 12, 2017 <<<<< </font> <a href="#Assignments"> Read me! </a>
- <ul>
-     <li> <a href="2017_2/Tests/CK0255_TIP8421_HW01.pdf"> Assignment</a>: Basic inference and the Gaussians
- </ul>
-
- <font color="orange">>>>>>> <a href="https://goo.gl/2DNdzf"><font color="orange">Avalia&ccedil;&atilde;o Institucional 2017.2</font></a> <<<<<<</font>
- <br><br>
-
- <a href="https://fkorona.github.io/TCC/TCC_2017_short.pdf"><font color="orange"> >>>>> TCC Positions - 1 or 2 positions @DC/CC <<<<< </font></a>
- <ul>
-  <li> Students of Computer Science, Computer Engineering, Statistics, Physics and Math are all invited to apply
- </ul>
-
- <a name="Lectures"></a>
- <h2>Lectures and schedule</h2>
-
- <ol start="0">
-
- <li> <bold>About this course</bold><br><br>
- <table id="bord" style="width: 100%;">
-  <tr id="bord">
-   <td id="bord" style="width: 10%;">A
-   </td>
-   <td id="bord" style="width: 35%;"><bold>About this course</bold> (FC)
-    <ul><li><a href="index.html">An eternal golden braid</a></ul>
-   </td>
-   <td id="bord" style="width: 55%;">
-    <ul><li> About this course</ul>
-   </td>
-  </tr>
- </table><br><br>
-
- <li> <bold>Probability theory and distribution theory</bold><br><br>
- <table id="bord" style="width: 100%;">
-  <tr id="bord">
-  <td id="bord" style="width: 10%;">A</td>
-  <td id="bord" style="width: 35%;"><bold>Probability theory</bold> (FC)
-   <ul><li><a href="2017_2/Lecture_notes/01A_Probability_theory.pdf">Slides</a> (AUG 30, SEP 01 and SEP 06 | <font color="red">Last update SEP 06</font>)
-       <li><a href="2017_2/Exercise_sheets/CK0255_TIP8421_Exercise_01A_2017_2.pdf">Exercises</a> (<font color="red">Last update SEP 04</font>, fixed errors in A.4 and A.5)
-   </ul>
-  </td>
-  <td id="bord" style="width: 55%;">
-  <ul>
-   <li> Set theory
-   <li> Probability set functions
-   <li> Conditional probability and independence
-  </ul>
-  </td>
- </tr>
- <tr id="bord">
- <td id="bord" style="width: 10%;">B</td>
- <td id="bord" style="width: 35%;"><bold>Random variables</bold> (FC)
-     <ul><li><a href="2017_2/Lecture_notes/01B_Random_variables.pdf">Slides</a> (<strike>SEP 08</strike> SEP 13 and SEP 15 | <font color="red">Last update SEP 15</font>)
-         <li><a href="2017_2/Exercise_sheets/CK0255_TIP8421_Exercise_01B_2017_2.pdf">Exercises</a>
- </ul>
- </td>
- <td id="bord" style="width: 55%;">
-  <ul>
-  <li> Probability mass functions, probability density functions, distribution functions
-  <li> Discrete random variables (PMF and transformations)
-  <li> Continuous random variables (PDF and transformations)
- </ul>
- </td>
- </tr>
- <tr id="bord">
- <td id="bord" style="width: 10%;">C</td>
- <td id="bord" style="width: 35%;"><bold>Expectations</bold> (FC)
-     <ul><li><a href="2017_2/Lecture_notes/01C_Expectations.pdf">Slides</a> (SEP 20 and SEP 22 | <font color="red">Last update SEP 19</font>)
-         <li><a href="2017_2/Exercise_sheets/CK0255_TIP8421_Exercise_01C_2017_2.pdf">Exercises</a>
-  </ul>
- </td>
- <td id="bord" style="width: 55%;">
-  <ul>
-  <li> Expectations, moment generating functions
-  </ul>
- </td>
- </tr>
- <tr id="bord">
- <td id="bord" style="width: 10%;">D</td>
- <td id="bord" style="width: 35%;"><bold>Inequalities</bold> (FC)
-  <ul><li><a href="2017_2/Lecture_notes/01D_Inequalities.pdf">Slides</a> (<strike>SEP 20 and SEP 22</strike>, postponed)
-  </ul>
- </td>
- <td id="bord" style="width: 55%;">
-  <ul>
-  <li> Markov's inequality
-  <li> Chebyshev's inequality
-  <li> Jensen's inequality
- </ul>
- </td>
- </tr>
- </table><br><br>
-
- <li> <bold>Multivariate distributions</bold><br><br>
- <table id="bord" style="width: 100%;">
- <tr id="bord">
-  <td id="bord" style="width: 10%;">A</td>
-  <td id="bord" style="width: 35%;"><bold>Two random variables</bold> (FC)
-  </td>
-  <td id="bord" style="width: 55%;">
-  <ul>
-   <li> Joint CDF, joint PMF, joint PDF
-   <li> Expectation, MGF
-  </ul>
-  </td>
-  </tr>
-  <tr id="bord">
-   <td id="bord" style="width: 10%;">B</td>
-   <td id="bord" style="width: 35%;"><bold>Transformations</bold> (FC)
-  </td>
-  <td id="bord" style="width: 55%;">
-   <ul>
-    <li> Expectations, moment generating functions
-   </ul>
-   </td>
-  </tr>
-  <tr id="bord">
-   <td id="bord" style="width: 10%;">C</td>
-   <td id="bord" style="width: 35%;"><bold>Conditional distributions and expectations</bold> (FC)
-   </td>
-    <td id="bord" style="width: 55%;">
-     <ul>
-      <li> Conditional PMF, conditional PDF, conditional expectations
-     </ul>
-    </td>
-  </tr>
-  <tr id="bord">
-   <td id="bord" style="width: 10%;">D</td>
-   <td id="bord" style="width: 35%;"><bold>Correlation coefficient</bold> (FC)
-   </td>
-    <td id="bord" style="width: 55%;">
-    </td>
-  </tr>
-  <tr id="bord">
-   <td id="bord" style="width: 10%;">E</td>
-   <td id="bord" style="width: 35%;"><bold>Independent random variables</bold> (FC)
-   </td>
-    <td id="bord" style="width: 55%;">
-    </td>
-  </tr>
-  <tr id="bord">
-   <td id="bord" style="width: 10%;">F</td>
-   <td id="bord" style="width: 35%;"><bold>Several random variables</bold> (FC)
-   </td>
-    <td id="bord" style="width: 55%;">
-     <ul>
-      <li> Joint conditional PMF/PDF
-      <li> Mutual independence
-      <li> Variance-covariance matrices
-      <li> Transformations
-      <li> Linear combinations
-     </ul>
-    </td>
-  </tr>
- </table><br>
- <ul>
-     <li><a href="2017_2/Lecture_notes/02A_Two_random_variables.pdf">Slides - Part A</a> (SEP 27, OCT 04 and <strike>OCT 06</strike> (canceled, department meeting) OCT 11 | <font color="red">Last update OCT 04</font>, fixed errors in some integrals)
-  <li><a href="2017_2/Lecture_notes/02B_Two_random_variables.pdf">Slides - Part B</a> (OCT 11, OCT 13, OCT 18 and OCT 20 | <font color="red">Last update OCT 19</font>)
-  <li><a href="2017_2/Lecture_notes/02C_Several_random_variables.pdf">Slides - Part C</a> (OCT 25 and OCT 27)
-  <li><a href="2017_2/Exercise_sheets/CK0255_TIP8421_Exercise_02A_2017_2.pdf">Exercises</a> (<font color="red">Last update NOV 20</font>)
- </ul>
- <br><br>
-
- <li> <bold>Some named distributions</bold><br><br>
- <table id="bord" style="width: 100%;">
- <tr id="bord">
-  <td id="bord" style="width: 10%;">A</td>
-  <td id="bord" style="width: 35%;"><bold>The binomial distribution and the Poisson distribution</bold> (FC)
-   <ul><li><a href="2017_2/Lecture_notes/03A_Binomial_and_Poisson.pdf">Slides</a> (<font color="red">Last update NOV 01</font>, fixed some errors)
-   </ul>
-  </td>
-  <td id="bord" style="width: 55%;">
-  <ul>
-   <li> The binomial distribution
-   <li> The Poisson distribution
-  </ul>
-  </td>
-  </tr>
-  <tr id="bord">
-   <td id="bord" style="width: 10%;">B</td>
-   <td id="bord" style="width: 35%;"><bold>The gamma distribution and friends</bold> (FC)
-    <ul><li><a href="2017_2/Lecture_notes/03B_Gamma.pdf">Slides</a>
-    </ul>
-   </td>
-    <td id="bord" style="width: 55%;">
-     <ul>
-      <li> The gamma distribution
-      <li> The exponential distribution
-      <li> The chi-square distribution
-     </ul>
-    </td>
-  </tr>
-  <tr id="bord">
-   <td id="bord" style="width: 10%;">C</td>
-   <td id="bord" style="width: 35%;"><bold>The normal distribution</bold> (FC)
-    <ul>
-     <li><a href="2017_2/Lecture_notes/03C_Normal.pdf">Slides</a> (NOV 3, <strike>NOV 8 and NOV10</strike> (cancelled, Encontros Universit&aacuterios) and NOV 17 | <font color="red">Last updated, NOV 17 </font>)
-    </ul>
-   </td>
-    <td id="bord" style="width: 55%;">
-     <ul>
-      <li> The normal distribution
-      <li> The multivariate normal distribution
-     </ul>
-    </td>
-  </tr>
-  <tr id="bord">
-   <td id="bord" style="width: 10%;">D</td>
-   <td id="bord" style="width: 35%;"><bold>$t$ and $F$ distributions</bold> (FC)
-    <ul>
-     <li><a href="2017_2/Lecture_notes/03D_t_and_F.pdf">Slides</a> (NOV 22)
-    </ul>
-   </td>
-    <td id="bord" style="width: 55%;">
-     <ul>
-      <li> The $t$-distribution
-      <li> The $F$-distribution
-      <li> The Student's theorem
-     </ul>
-    </td>
-  </tr>
-  <tr id="bord">
-   <td id="bord" style="width: 10%;">E</td>
-   <td id="bord" style="width: 35%;"><bold>Mixture distributions</bold> (FC)
-    <ul>
-     <li><a href="2017_2/Lecture_notes/03E_Mixtures.pdf">Slides</a> (NOV 29)
-    </ul>
-   </td>
-    <td id="bord" style="width: 55%;">
-    </td>
-  </tr>
- </table><br><br>
-
- <li> <bold>Elementary inference</bold><br><br>
- <table id="bord" style="width: 100%;">
- <tr id="bord">
-  <td id="bord" style="width: 10%;">A</td>
-  <td id="bord" style="width: 35%;"><bold>Sampling and statistics</bold> (FC)
-   <ul><li><a href="2017_2/Lecture_notes/04A_Sampling.pdf">Slides</a> (NOV 29, <strike>DEC 01</strike>, DEC 06 and DEC 08)
-   </ul>
-  </td>
-  <td id="bord" style="width: 55%;">
-  <ul>
-   <li> Random samples, statistics, estimators
-   <li> Histogram estimates of PMF and PDF
-  </ul>
-  </td>
-  </tr>
-  <tr id="bord">
-   <td id="bord" style="width: 10%;">B</td>
-   <td id="bord" style="width: 35%;"><bold>Confidence intervals and order statistics</bold> (FC)
-   <ul><li><a href="http://www.disney.com">Slides</a>
-   </ul>
-  </td>
-  <td id="bord" style="width: 55%;">
-   <ul>
-    <li> Definitions, difference in means, difference in proportions
-    <li> CIs for the parametres of discrete distributions
-    <li> Quantiles, confidence intervals for quantiles
-     </ul>
-    </td>
-  </tr>
-  <tr id="bord">
-   <td id="bord" style="width: 10%;">C</td>
-   <td id="bord" style="width: 35%;"><bold>Hypothesis testing</bold> (FC)
-    <ul>
-     <li><a href="http://www.disney.com">Slides</a>
-    </ul>
-   </td>
-    <td id="bord" style="width: 55%;">
-     <ul>
-      <li> Hypothesis, tests, error types, significance levels
-      <li> Critics
-     </ul>
-    </td>
-  </tr>
- </table><br><br>
-
- <li> <bold>Consistency and limiting distributions</bold><br><br>
- <table id="bord" style="width: 100%;">
- <tr id="bord">
-  <td id="bord" style="width: 10%;">A</td>
-  <td id="bord" style="width: 35%;"><bold>Convergence in probability and convergence in distribution</bold> (FC)
-   <ul><li><a href="http://www.disney.com">Slides</a>
-   </ul>
-  </td>
-  <td id="bord" style="width: 55%;">
-   <ul>
-    <li> Bounds in probability
-    <li> The $\Delta$-method
-    <li> The MGF technique
-   </ul>
-   <br>
-   <ul>
-    <li> The central limit theorem
-   </ul>
-  </td>
-  </tr>
- </table><br><br>
-
-
- <li> <bold>Maximum likelihood methods</bold><br><br>
- <table id="bord" style="width: 100%;">
-  <tr id="bord">
+  <li> <bold>About this course</bold><br><br>
+  <table id="bord" style="width: 100%;">
+   <tr id="bord">
    <td id="bord" style="width: 10%;">A</td>
-   <td id="bord" style="width: 35%;"><bold>Maximum likelihood estimation</bold> (FC)
-   <ul><li><a href="http://www.disney.com">Slides</a>
-   </ul>
-  </td>
+   <td id="bord" style="width: 35%;"><bold>Preliminaries</bold> (FC)</td>
   <td id="bord" style="width: 55%;">
    <ul>
-    <li> The Rao-Cram&#233;r inequality
-    <li> Fisher information
-    <li> Score function
-    <li> Efficiency
+    <li>About this course (<a href="index.html">An eternal golden braid</a>)
    </ul>
-   <br>
+  </td>
+  </tr>
+  </table>
+  <br>
+    <a href="Intro.pdf">Intro</a>
+  <br><br>
+
+  <li> <bold>Refreshers</bold><br><br>
+  <table id="bord" style="width: 100%;">
+   <tr id="bord">
+   <td id="bord" style="width: 10%;">A</td>
+   <td id="bord" style="width: 35%;"><bold>Dynamical systems</bold> (FC)</td>
+  <td id="bord" style="width: 55%;">
    <ul>
-    <li> Rao-Cramer lower bound
-    <li> Maximum likelihood tests
+    <li> Input-output and state-space representations, characteristics
+    <li> (Elements of ordinary differential equations, theory of distributions)
    </ul>
-   </td>
-  </tr>
-  <tr id="bord">
+  </td>
+   <tr id="bord">
    <td id="bord" style="width: 10%;">B</td>
-   <td id="bord" style="width: 35%;"><bold>Expectation maximization</bold> (FC)
-    <ul>
-     <li><a href="http://www.disney.com">Slides</a>
-    </ul>
-   </td>
-    <td id="bord" style="width: 55%;">
-    </td>
+   <td id="bord" style="width: 35%;"><bold>Probability theory</bold> (FC)</td>
+  <td id="bord" style="width: 55%;">
+   <ul>
+    <li> Laws of probability, random variables, useful theorems, random numbers
+   </ul>
+  </td>
+   <tr id="bord">
+   <td id="bord" style="width: 10%;">C</td>
+   <td id="bord" style="width: 35%;"><bold>Vector calculus</bold> (FC)</td>
+  <td id="bord" style="width: 55%;">
+   <ul>
+    <li> Vector stuff
+    <li> Matrix stuff
+   </ul>
+  </td>
   </tr>
- </table><br><br>
- </ol>
+  </table>
+  <br>
+    <ul>
+     <li> <a href="Systems.pdf">Systems</a>, <a href="Signals.pdf">Signals</a>, <a href="ODEs.pdf">ODEs</a>
+     <li> <a href="Matrices.pdf">Matrices</a>
+     <li> <a href="RVs.pdf">RVs</a>
+    </ul>
+  <br>
 
-        [<a href="#top">Top</a>]
-        <hr id="dash">
+  <li> <bold>Deterministic Markov processes</bold><br><br>
+  <table id="bord" style="width: 100%;">
+   <tr id="bord">
+   <td id="bord" style="width: 10%;">A</td>
+   <td id="bord" style="width: 35%;"><bold>Input-output and state-space representation</bold> (FC)</td>
+  <td id="bord" style="width: 55%;">
+   <ul>
+    <li> Representation and analysis
+    <li> Homogeneus equation and modes
+   </ul><br>
+    <ul>
+    <li> Analysis and state transition matrix
+    <li> Sylvester expansion
+    </ul>
+  </td>
+   <tr id="bord">
+   <td id="bord" style="width: 10%;">B</td>
+   <td id="bord" style="width: 35%;"><bold>Time evolution</bold> (FC)</td>
+  <td id="bord" style="width: 55%;">
+   <ul>
+   <li> Force-free evolution and types of modes
+   <li> Impulse response and forced evolution
+   <li> Durhamel's integral
+   </ul><br>
+    <ul>
+     <li> Lagrange formula, force-free and forced evolution
+     <li> Similarity transformations and diagonalisation
+     <li> Jordan's form, generalised eigenvectors
+     <li> Generalised modal matrix and state transition matrix
+     <li> State transition matrix and modes
+    </ul>
+  </td>
+  </tr>
+  </table>
+   <br>
+    <ul>
+     <li> <a href="IO_time.pdf">Slides/IO in time</a>; <a href="EX1_IO_time.pdf">Exercises/IO in time</a>, <a href="EX2_IO_time.pdf">Exercises/IO in time</a>
+     <li> <a href="SS_time.pdf">Slides/SS in time</a>; <a href="EX1_SS_time.pdf">Exercises/SS in time</a>, <a href="EX1_SS_time.pdf">Exercises/SS in time</a>
+    </ul>
+  <br>
 
-        <a name="Assignments"></a>
-        <h2>Problem sets</h2>
-        As we use problem set questions covered by books, papers and webpages, we expect you not to copy, refer to, or look at the solutions in preparing your answers. We expect you to want to learn and not google for answers: If you do happen to use other material, it must be acknowledged clearly with a citation on the submitted solution.<br><br> <font color=#333>&#9775;</font> The purpose of problem sets is to help you think about the material, not just give us the right answers.<br><br>
+  <li> <bold>Stochastic Markov processes</bold><br><br>
+  <table id="bord" style="width: 100%;">
+   <tr id="bord">
+   <td id="bord" style="width: 10%;">A</td>
+   <td id="bord" style="width: 35%;"><bold>Discrete-time discrete-space</bold> (FC)</td>
+  <td id="bord" style="width: 55%;">
+   <ul>
+    <li> Definitions, dependence and embeddeability
+    <li> Chapman-Kolmogorov equations
+    <li> Probability distributions
+    <li> Classification of states
+   </ul>
+  </td>
+   <tr id="bord">
+   <td id="bord" style="width: 10%;">C</td>
+   <td id="bord" style="width: 35%;"><bold>Continuous-time discrete-space</bold> (FC)</td>
+  <td id="bord" style="width: 55%;">
+   <ul>
+    <li> Propagator and time-evolution equations
+    <li> Stable processes and weak noise approximation
+   </ul>
+  </td>
+   <tr id="bord">
+   <td id="bord" style="width: 10%;">B</td>
+   <td id="bord" style="width: 35%;"><bold>General processes</bold> (FC)</td>
+  <td id="bord" style="width: 55%;">
+   <ul>
+    <li> State density function, Chapman-Kolmogorov equations
+    <li> Propagators and time-evolution equations
+   </ul>
+  </td>
+  </tr>
+  </table>
+  <br>
+   <ul>
+    <li> <a href="DDMP_1.pdf">Slides/DDMP/Part A</a>, <a href="DDMP_2.pdf">Slides/DDMP/Part B</a>; <a href="EX_DDMP.pdf">Exercises</a>
+    <li> <a href="DDMP_1.pdf">Slides/CDMP/Part A</a>, <a href="DDMP_2.pdf">Slides/CDMP/Part B</a>; <a href="EX_CDMP.pdf">Exercises</a>
+   </ul>
 
-        Homeworks must be done individually: Each of you must hand in his/her own answers. In addition, each of you must write his/her own code when requested. It is acceptable, however, for you to collaborate in figuring out answers. We are assuming that you take the responsibility to make sure you personally understand the solution to any work arising from collaboration (though, you must indicate on each homework with whom you collaborated).
-        <br><br>
-        <font color=#333>&#9883;</font> To typeset  assignments, students are encouraged to use this <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a> template: <a href="2017_2/Additional_stuff/CK0255_Exercise_template_2017_2.tex">Source</a> (<a href="2017_2/Additional_stuff/CK0255_Exercise_template_2017_2.pdf">PDF</a>).
-        <br><br>
-        <font color=#333>&#9888;</font> <font color="red">Assignments must be returned via SIGAA.</font>
-        <br><br>
-        [<a href="#top">Top</a>]
-        <hr id="dash">
+  </ol>
 
-        <a name="Material"></a>
-        <h2>Material</h2>
-        Course slides will suffice. Slides are mostly based on the following textbook:
-        <ul>
-            <li> <bold>Statistical inference</bold> (2nd edition), by George Casella and Roger L. Berger.
-        </ul>
-        The material can be complemented using material from the following textbooks (list not exhaustive):
-        <ol>
-            <li> <bold>Theory of point-estimation</bold> (2nd edition), by Erich L. Lehmann and George Casella;
-                <li> <bold>Testing statistical hypothesis</bold> (3rd edition), by Erich L. Lehmann and Joseph P. Romano;
-            <li> <bold>Elements of large-sample theory</bold>, by Erich L. Lehmann.
-        </ol>
-        <font color=#333>&#9760;</font> Copies of these books are floating around.<br><br>
-        <font color="red"> >>>>>> Course material is prone to a typo or two - Please inbox  FC to report <<<<<< </font> <br><br>
+         [<a href="#top">Top</a>]
+         <hr id="dash">
 
-        <a href="#top">Top</a>
-        <hr id="dash">
+         <a name="Assignments"></a>
+         <h2>Problem sets</h2>
+         As we use problem set questions covered by books, papers and webpages, we expect you not to copy, refer to, or look at the solutions in preparing your answers. We expect you to want to learn and not google for answers: If you do happen to use other material, it must be acknowledged clearly with a citation on the submitted solution.<br><br> <font color=#333>&#9775;</font> The purpose of problem sets is to help you think about the material, not just give us the right answers.<br><br>
 
-        <a name="Pops"></a>
-        <h2>Read me or watch me</h2>
-        <ul>
-            <li> The main inspiration for this course: <a href="http://callingbullshit.org">Calling bullshit in the age of big data</a>, with <a href="https://goo.gl/Gy3ssG">lectures</a>
-        </ul>
+         Homeworks must be done individually: Each of you must hand in his/her own answers. In addition, each of you must write his/her own code when requested. It is acceptable, however, for you to collaborate in figuring out answers. We are assuming that you take the responsibility to make sure you personally understand the solution to any work arising from collaboration (though, you must indicate on each homework with whom you collaborated).
 
-        <a href="#top">Top</a>
-        <hr id="dash">
+         <br><br>
 
-    </body>
-</html>
+         <font color=#333>&#9883;</font> To typeset  assignments, students are encouraged to use this <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a> template: <a href="2018_1/Additional_stuff/CK0191_Exercise_template_2018_1.tex">Source</a> (<a href="2018_1/Additional_stuff/CK0191_Exercise_template_2018_1.pdf">PDF</a>).
+         <br><br>
+         <font color=#333>&#9888;</font> <font color="red">Assignments must be returned via SIGAA.</font>
+         <br><br>
+         [<a href="#top">Top</a>]
+         <hr id="dash">
+
+         <a name="Material"></a>
+         <h2>Material</h2>
+         Course slides will suffice. Slides are mostly based on the following textbook:
+         <ul>
+          <li> <bold>Conditional Markov Processes and their application to the theory of optimal control</bold>, by Ruslan Stratonovich.
+         </ul>
+         The material can be complemented using material from the following textbooks (list not exhaustive):
+         <ol>
+          <li> <bold>Stochastic processes: From applications to theory</bold>, by Pierre Del Moral.
+          <li> <bold>Stochastic processes</bold>, by Joseph Doob.
+         </ol>
+         <font color=#333>&#9760;</font> Copies of these books are floating around.<br><br>
+         <font color="red"> >>>>>> Course material is prone to a typo or two - Please inbox  FC to report <<<<<< </font> <br><br>
+
+         <a href="#top">Top</a>
+         <hr id="dash">
+
+         <a name="Pops"></a>
+         <h2>Read me or watch me</h2>
+         <ul>
+          <li> The <a href="http://callingbullshit.org">main inspiration</a> for our courses remains unchanged
+          <li> The second main inspiration, <a href=https://www.youtube.com/watch?v=4inIBmY8dQI>zero-fuck-given MJ</a> (<a href=https://www.youtube.com/watch?v=28TefyYoAm4>serious MJ</a> flavour)
+          <li> Thirdly, <a href="https://bit.ly/2NZJrT8">`"Deep learning implements the renormalization group!" Yeah, I heard that too'</a>
+         </ul>
+
+         <a href="#top">Top</a>
+         <hr id="dash">
+
+     </body>
+ </html>

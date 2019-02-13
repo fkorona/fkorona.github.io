@@ -1,0 +1,293 @@
+<html>
+    <head>
+        <title>Advanced topics in artificial intelligence I (CK0146)</title>
+        <link rel=StyleSheet href="style.css" type="text/css" media=screen>
+            </head>
+
+    <body>
+        <a name="top"></a>
+        <h1>Advanced topics in artificial intelligence I (CK0146)</h1>
+
+        The course overviews selected topics in machine learning and pattern recognition. We study some of the central principles of statistical machine learning, including probabilistic modelling, density estimation and generalised linear models for regression and classification:
+        <ol>
+            <li> <bold>Introductory refresher</bold>: Probability theory, decision theory and information theory;
+            <li> <bold>Probability distributions</bold>: Binary and multinomial variables, the Gaussian, the exponential family, non-parametric distributions;
+            <li> <bold>Linear models for regression</bold>: Linear basis function models, Bayesian linear regression, evidence approximation;
+            <li> <bold>Linear models for classification</bold>: Discriminant functions, probabilistic generative models, probabilistic discriminative models, Bayesian logistic regression.
+        </ol>
+        Stuff from the past: Previous version of the course are available (internal links may need adjustment) for <a href="2016_2/index.html">2016.2</a> and <a href="2015_2/index.html">2015.2</a>
+        <br><br>
+        <iframe src="https://www.youtube.com/embed/njDLlDEN3j4" width="800" height="449" frameborder="5"></iframe>
+        <br><br>
+        <bold>Instructor <font color=#333>&#9822;</font>:</bold> <a href="fkorona.github.io">Francesco Corona</a> (FC), francesco d&ouml;t corona &auml;t ufc d&ouml;t br<br><br>
+        <bold>Physical location <font color=#333>&#9820;</font>:</bold> Tuesdays and Thursdays 14:00-16:00, Bloco 950, Sala 05.<br>
+        <bold>Internet location <font color=#333>&#9814;</font>:</bold> Here! Or, <a href="https://si3.ufc.br/sigaa/public/home.jsf">here</a> (CK0146) for mambojumbo related to administration.
+        <br><br>
+        <bold>Evaluation <font color=#333>&#9997;</font>:</bold> Approx. half a dozen theoretical and practical problem sets will be assigned as homework. Homework assignments are equivalent to partial evaluations (APs). If needed a final evaluation will be arranged.
+        <br><br>
+
+        <hr id="dash">
+        Go to: &nbsp;
+        <a href="#Lectures">Lectures and schedule</a> |
+        <a href="#Assignments">Problem sets</a> |
+        <a href="#Material">Supplementary material</a> |
+        <a href="#Pops">As it pops out</a> |
+        <hr id="dash">
+
+        <h2>News</h2>
+        <font color="red">>>>>>> <a href="http://www.cpa.ufc.br/avaliacao-institucional-2017-1-tem-inicio-dia-19-de-junho-com-novidades/"><font color="red">Avalia&ccedil;&atilde;o Institucional 2017.1</font></a> <<<<<<</font><br><br>
+
+        <font color="red">>>>>>> <a href="2017_1/Additional_stuff/PIBIC_2017a_short.pdf"><font color="red">PIBIC 2017/2018 - 1 Position @ CC/DC</font></a> <<<<<<</font><br>
+        <font color="red">>>>>>> <a href="2017_1/Additional_stuff/PIBIC_2017b_short.pdf"><font color="red">PIBIC 2017/2018 - 2 Positions @ CT/DETI</font></a> <<<<<<</font>
+
+        <a name="Lectures"></a>
+        <h2>Lectures and schedule</h2>
+        <ol start="0">
+
+            <li> <bold>About this course</bold><br><br>
+                <table id="bord" style="width: 100%;">
+                    <tr id="bord">
+                        <td id="bord" style="width: 10%;">A</td>
+                        <td id="bord" style="width: 35%;"><bold>About this course</bold> (FC)
+                   <ul><li><a href="2017_1/Lecture_notes/00_Overview.pdf">Slides</a> (<font color=#333>&#9998;</font> MAR 14 and <font color=#333>&#9998;</font> MAR 16)
+                   </ul></td>
+                        <td id="bord" style="width: 55%;">
+                         <ul><li> About the type of machine learning, pattern recognition, and advanced topics in artificial intelligence that we study</ul></td>
+                    </tr>
+                </table><br><a href="2017_1/Exercise_sheets/CK0146_Exercise_00_Reality_check_2017_1.pdf">Reality check</a> (<font color=#333>&#9998;</font> MAR 14) <strike><font color="red">Hand-in by MAR 22 at 23:59:59 Fortaleza time</font></strike>
+                        <br><a href="2017_1/Exercise_sheets/CK0146_Exercise_01_Introduction_2017_1.pdf">Exercises</a> (<font color=#333>&#9998;</font> MAR 16) <strike><font color="red">Hand-in by APR 14 (was APR 09) at 23:59:59 Fortaleza time</font></strike><br><br>
+
+            <li> <bold>Introductory refresher</bold><br><br>
+                <table id="bord" style="width: 100%;">
+                    <tr id="bord">
+                        <td id="bord" style="width: 10%;">A</td>
+                        <td id="bord" style="width: 35%;"><bold>Probability theory</bold> (FC)
+                   <ul><li><a href="2017_1/Lecture_notes/01-01_Probability_refresher.pdf">Slides</a> (<font color=#333>&#9998;</font> MAR 21, <font color=#333>&#9998;</font> MAR 23, <font color=#333>&#9998;</font> MAR 28, <font color=#333>&#9998;</font> <strike>MAR 30</strike> (cancelled, Encontros Universit&aacute;rios 2017), <font color=#333>&#9998;</font> APR 04, and <font color=#333>&#9998;</font> APR 06)
+                   </ul></td>
+                        <td id="bord" style="width: 55%;">
+                         <ul>
+                          <li> Definitions and rules, densities, expectations and covariances
+                          <li> Bayesian probabilities, the univariate Gaussian distribution
+                          <li> Bayesian polynomial regression
+                          <li> Graphical models
+                         </ul></td>
+                    </tr>
+                    <tr id="bord">
+                        <td id="bord" style="width: 10%;">B</td>
+                        <td id="bord" style="width: 35%;"><bold>Decision theory</bold> (FC)
+                        <ul><li><a href="2017_1/Lecture_notes/01-02_Decision_theory.pdf">Slides</a> (<font color=#333>&#9998;</font> APR 25 and <font color=#333>&#9998;</font> APR 27)
+                        </ul></td>
+                        <td id="bord" style="width: 55%;">
+                            <ul>
+                                <li> Minimisation of the classification rate
+                                <li> Minimisation of the expected loss
+                                <li> The reject option
+                                <li> Inference and decision
+                                <li> Loss functions for regression
+                            </ul></td>
+                    </tr>
+                    <tr id="bord">
+                        <td id="bord" style="width: 10%;">C</td>
+                        <td id="bord" style="width: 35%;"><bold>Information theory</bold> (FC)
+                        <ul><li><a href="2017_1/Lecture_notes/01-03_Information_theory.pdf">Slides</a> (<font color=#333>&#9998;</font> APR 18, <font color=#333>&#9998;</font> APR 20 and <font color=#333>&#9998;</font> APR 25)
+                        </ul></td>
+                        <td id="bord" style="width: 55%;">
+                            <ul>
+                                <li> Shannon information content and entropy
+                                <li> Relative entropy
+                                <li> Mutual information
+                            </ul></td>
+                    </tr>
+                </table><br><a href="2017_1/Exercise_sheets/CK0146_Exercise_02_Refresher_2017_1.pdf">Exercises</a> (Last updated, APR 24 | <font color=#333>&#9998;</font> APR 18) <strike><font color="red">Hand-in by MAY 03 (was APR 30) at 23:59:59 Fortaleza time</font></strike><br><br>
+
+                <li> <bold>Probability distributions</bold><br><br>
+                    <table id="bord" style="width: 100%;">
+                        <tr id="bord">
+                            <td id="bord" style="width: 10%;">A</td>
+                            <td id="bord" style="width: 35%;"><bold>Binary and multinomial variables</bold> (FC)
+                            <ul><li><a href="2017_1/Lecture_notes/02-01_Binomial_and_multinomial_distributions.pdf">Slides</a> (<font color=#333>&#9998;</font> MAY 02 and <font color=#333>&#9998;</font> May 04)
+                            </ul></td>
+                            <td id="bord" style="width: 55%;">
+                                <ul>
+                                    <li> Bernoulli, binomial and beta distributions
+                                    <li> Multinomial and Dirichlet distributions
+                                </ul></td>
+                        </tr>
+                        <tr id="bord">
+                            <td id="bord" style="width: 10%;">B</td>
+                            <td id="bord" style="width: 35%;"><bold>The Gaussian distribution</bold> (FC)
+                            <ul><li><a href="2017_1/Lecture_notes/02-02_Gaussian_distributions.pdf">Slides</a> (<font color=#333>&#9998;</font> MAY 09, <font color=#333>&#9998;</font> MAY 11,<font color=#333>&#9998;</font> MAY 16, <font color=#333>&#9998;</font> <strike>MAY 18</strike> (cancelled, no power),<font color=#333>&#9998;</font> MAY 23, <font color=#333>&#9998;</font> MAY 25)
+                            </ul></td>
+                            <td id="bord" style="width: 55%;">
+                                <ul>
+                                    <li> Conditional and marginal Gaussians, Bayes' rule for Gaussians, maximum likelihood, sequential estimation, Bayesian inference, Student's t-distribution
+                                    <li> Mixtures of Gaussians (naive MLE, with latent variables and EM, k-means)
+                                </ul></td>
+                        </tr>
+                        <tr id="bord">
+                            <td id="bord" style="width: 10%;">C</td>
+                            <td id="bord" style="width: 35%;"><bold>The exponential family</bold> (FC)</td>
+                            <td id="bord" style="width: 55%;">
+                                <ul>
+                                    <li> Maximum likelihood and sufficient statistics
+                                    <li> Conjugate and non-informative priors
+                                </ul></td>
+                        </tr>
+                        <tr id="bord">
+                            <td id="bord" style="width: 10%;">D</td>
+                            <td id="bord" style="width: 35%;"><bold>Non-parametric distributions</bold> (FC)
+                                <ul><li><a href="2017_1/Lecture_notes/02-03_Nonparametric_densities.pdf">Slides</a> (<font color=#333>&#9998;</font> MAY 30, <strike><font color=#333>&#9998;</font> JUN 01</strike>)
+                                    </ul></td>
+                            <td id="bord" style="width: 55%;">
+                                <ul>
+                                    <li> Histograms, kernel and nearest-neighbour density estimators
+                                </ul></td>
+                        </tr>
+                    </table>
+                    <br><a href="2017_1/Exercise_sheets/CK0146_Exercise_03a_Inference_2017_1.pdf">Exercises</a> (Part 1 | <font color=#333>&#9998;</font> APR 20) <font color="red"><strike>Hand-in by MAY 21 at 23:59:59 Fortaleza time</strike></font>
+                    <br><a href="2017_1/Exercise_sheets/CK0146_Exercise_03b_Inference_2017_1.pdf">Exercises</a> (Part 2 | <font color=#333>&#9998;</font> MAY 30) <font color="red">Hand-in by JUN 20 (was JUN 13) at 23:59:59 Fortaleza time</font><br><br>
+
+                    <li> <bold>Generalised linear models for regression</bold><br><br>
+
+                        <table id="bord" style="width: 100%;">
+                            <tr id="bord">
+                                <td id="bord" style="width: 10%;">A</td>
+                                <td id="bord" style="width: 35%;"><bold>Linear basis function models</bold> (FC)
+                                    <ul><li><a href="2017_1/Lecture_notes/03-01_Linear_basis_function_models.pdf">Slides</a> (<font color=#333>&#9998;</font> JUN 06 and <font color=#333>&#9998;</font> JUN 08)</td>
+                                <td id="bord" style="width: 55%;">
+                                    <ul>
+                                        <li> Maximum likelihood and least-squares, geometry of the least-squares
+                                        <li> Sequential learning
+                                        <li> Regularised least-squares
+                                        <li> Multiple outputs
+                                    </ul></td>
+                            </tr>
+                            <tr id="bord">
+                                <td id="bord" style="width: 10%;">B</td>
+                                <td id="bord" style="width: 35%;"><bold>Bayesian linear regression</bold> (FC)
+                                    <ul><li><a href="2017_1/Lecture_notes/03-02_Bayesian_linear_regression.pdf">Slides</a> (<font color=#333>&#9998;</font> JUN 13 and <font color=#333>&#9998;</font> JUN 20)</td>
+                                <td id="bord" style="width: 55%;">
+                                    <ul>
+                                        <li> Parameter distribution and predictive distribution
+                                        <li> The equivalent kernel and Gaussian processes for regression
+                                    </ul></td>
+                            <tr id="bord">
+                                <td id="bord" style="width: 10%;">C</td>
+                                <td id="bord" style="width: 35%;"><bold>Bias-variance decomposition</bold> (FC)
+                                    <ul><li><a href="2017_1/Lecture_notes/03-03_Bias_variance_tradeoff.pdf">Slides</a> (<font color=#333>&#9998;</font> JUN 20)</td>
+                                <td id="bord" style="width: 55%;">
+                                    <ul>
+                                        <li> Bias-variance decomposition
+                                    </ul></td>
+                                </tr>
+                            </tr>
+                            <tr id="bord">
+                                <td id="bord" style="width: 10%;">D</td>
+                                <td id="bord" style="width: 35%;"><bold>Bayesian model comparison</bold> (FC)</td>
+                                <td id="bord" style="width: 55%;">
+                                    <ul>
+                                        <li> Bayesian model comparison
+                                    </ul></td>
+                            </tr>
+                        </table>
+                        <br><a href="2017_1/Exercise_sheets/CK0146_Exercise_04_Regression_2017_1.pdf">Exercises</a> (<font color=#333>&#9998;</font> JUN 20) <font color="red">Hand-in by JULY 08 (was JULY 02) at 23:59:59 Fortaleza time</font><br><br>
+
+                        <li> <bold>Generalised linear models for classification</bold><br><br>
+
+                            <table id="bord" style="width: 100%;">
+                                <tr id="bord">
+                                    <td id="bord" style="width: 10%;">A</td>
+                                    <td id="bord" style="width: 35%;"><bold>Discriminative functions</bold> (FC)
+                                        <ul><li><a href="2017_1/Lecture_notes/04_01_Discriminant_functions.pdf">Slides</a> (<font color=#333>&#9998;</font> JUN 22)</td>
+                                    <td id="bord" style="width: 55%;">
+                                        <ul>
+                                            <li> Two- and multi-class classification
+                                            <li> Least-squares for classification
+                                            <li> Fisher's linear discriminant
+                                        </ul></td>
+                                </tr>
+                                <tr id="bord">
+                                    <td id="bord" style="width: 10%;">B</td>
+                                    <td id="bord" style="width: 35%;"><bold>Probabilistic generative models</bold> (FC)
+                                        <ul><li><a href="2017_1/Lecture_notes/04_02_Probabilistic_generative_models.pdf">Slides</a> (<font color=#333>&#9998;</font> JUN 27)</td>
+                                    <td id="bord" style="width: 55%;">
+                                        <ul>
+                                            <li> Continuous inputs, maximum likelihood solution
+                                        </ul></td>
+                                </tr>
+                                <tr id="bord">
+                                    <td id="bord" style="width: 10%;">C</td>
+                                    <td id="bord" style="width: 35%;"><bold>Probabilistic discriminative models</bold> (FC)
+                                        <ul><li><a href="2017_1/Lecture_notes/04_03_Probabilistic_discriminative_models.pdf">Slides</a> (<font color=#333>&#9998;</font> JUN 29)</td>
+                                    <td id="bord" style="width: 55%;">
+                                        <ul>
+                                            <li> Logistic regression and iterative re-weighted least-squares
+                                            <li> Probit regression
+                                            <li> Canonical link functions
+                                        </ul></td>
+                                </tr>
+                                <tr id="bord">
+                                    <td id="bord" style="width: 10%;">D</td>
+                                    <td id="bord" style="width: 35%;"><bold>Laplace approximation</bold> (FC)</td>
+                                    <td id="bord" style="width: 55%;">
+                                        <ul>
+                                            <li> Model comparison and BIC
+                                        </ul></td>
+                                </tr>
+                                <tr id="bord">
+                                    <td id="bord" style="width: 10%;">E</td>
+                                    <td id="bord" style="width: 35%;"><bold>Bayesian logistic regression</bold> (FC)</td>
+                                    <td id="bord" style="width: 55%;">
+                                        <ul>
+                                            <li> Laplace approximation, predictive distribution
+                                        </ul></td>
+                                </tr>
+                            </table>
+                            <br>
+                            </ol>
+        [<a href="#top">Top</a>]
+        <hr id="dash">
+
+        <a name="Assignments"></a>
+        <h2>Problem sets</h2>
+        As we use problem set questions covered by books, papers and webpages, we expect you not to copy, refer to, or look at the solutions in preparing your answers. We expect you to want to learn and not google for answers: If you do happen to use other material, it must be acknowledged clearly with a citation on the submitted solution.<br><br> <font color=#333>&#9775;</font> The purpose of problem sets is to help you think about the material, not just give us the right answers.<br><br>
+
+        Homeworks must be done individually: Each of you must hand in his/her own answers. In addition, each of you must write his/her own code when requested. It is acceptable, however, for you to collaborate in figuring out answers. We are assuming that you take the responsibility to make sure you personally understand the solution to any work arising from collaboration (though, you must indicate on each homework with whom you collaborated).
+        <br><br>
+        <font color=#333>&#9883;</font> To typeset  assignments, students and teaching assistants are encouraged to use this <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a> template: <a href="2017_1/Additional_stuff/CK0146_Exercise_template_2017_1.tex">Source</a> (<a href="2017_1/Additional_stuff/CK0146_Exercise_template_2017_1.pdf">PDF</a>).
+        <br><br>
+        <font color=#333>&#9888;</font> <font color="red">Assignments must be returned before deadline via SIGAA (if you're in it, you'll get notified of the opening of a new task) or, if you're not in SIGAA, return via email to one of the responsible teaching assistants - Delays will be penalised.</font>
+        <br><br>
+        [<a href="#top">Top</a>]
+        <hr id="dash">
+
+        <a name="Material"></a>
+        <h2>Material</h2>
+        Course slides will suffice. Slides are mostly based on the following textbook:
+        <ul>
+            <li> <bold>Pattern Recognition and Machine Learning</bold>, by Christopher Bishop.
+                </ul>
+        The material can be complemented using material from the following textbooks (list not exhaustive):
+        <ol>
+            <li> <bold>Machine Learning: A Probabilistic Perspective</bold>, by Kevin Murphy;
+                <li> <bold>The Elements of Statistical Learning</bold> (<a href="http://statweb.stanford.edu/~tibs/ElemStatLearn/">Book website</a>), by Trevor Hastie, Robert Tibshirani and Jerome Friedman;
+                    <li> <bold>Bayesian Reasoning and Machine Learning</bold> (<a href="http://www0.cs.ucl.ac.uk/staff/d.barber/brml">Book website</a>), by David Barber.
+                        </ol>
+        <font color=#333>&#9760;</font> Copies of these books are floating around.<br><br>
+        <font color="red"> >>>>>> Course material is prone to a typo or two - Please inbox  FC to report <<<<<< </font> <br><br>
+
+        <a href="#top">Top</a>
+        <hr id="dash">
+
+        <a name="Pops"></a>
+        <h2>Read me or watch me</h2>
+        <ul>
+         <li> <a href="https://medium.com/@karpathy/a-peek-at-trends-in-machine-learning-ab8a1085a106">A Peek at Trends in Machine Learning</a>
+         <li> <a href="http://www.inference.vc/everything-that-works-works-because-its-bayesian-2/"> Everything that works works because it's Bayesian: Why deep nets generalize?
+        </ul>
+
+        <a href="#top">Top</a>
+        <hr id="dash">
+
+    </body>
+</html>
